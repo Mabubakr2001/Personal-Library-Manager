@@ -34,7 +34,7 @@ public class Reader {
     @Column(name = "is_enabled", nullable = false)
     private Boolean isEnabled;
 
-    @Column(name = "verification_code", length = 6)
+    @Column(name = "verification_code")
     private String verificationCode;
 
     @Column(name = "verification_expiration")

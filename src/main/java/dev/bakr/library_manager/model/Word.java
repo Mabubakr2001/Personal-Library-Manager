@@ -19,13 +19,13 @@ public class Word {
     @Column(name = "word_id", updatable = false)
     private Long id;
 
-    @Column(name = "word_content", nullable = false, length = 45)
+    @Column(name = "word_content", nullable = false)
     private String wordContent;
 
     @Column(name = "translation", nullable = false)
     private String translation;
 
-    @Column(name = "related_sentence", nullable = false, length = 2000)
+    @Column(name = "related_sentence", nullable = false)
     private String relatedSentence;
 
     @Column(name = "page_number", nullable = false)

@@ -18,7 +18,7 @@ public class Author {
     @Column(name = "author_id", updatable = false)
     private Long id;
 
-    @Column(name = "full_name", nullable = false, unique = true, length = 50)
+    @Column(name = "full_name", nullable = false)
     private String fullName;
 
     @Override

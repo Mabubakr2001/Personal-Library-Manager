@@ -19,7 +19,7 @@ public class Quote {
     @Column(name = "quote_id", updatable = false)
     private Long id;
 
-    @Column(name = "text", nullable = false, length = 2000)
+    @Column(name = "text", nullable = false)
     private String text;
 
     @Column(name = "page_number", nullable = false)

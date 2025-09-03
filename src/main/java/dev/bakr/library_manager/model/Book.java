@@ -19,22 +19,22 @@ public class Book {
     @Column(name = "book_id", updatable = false)
     private Long id;
 
-    @Column(name = "title", nullable = false, unique = true, length = 1000)
+    @Column(name = "title", nullable = false)
     private String title;
 
-    @Column(name = "subtitle", length = 3000)
+    @Column(name = "subtitle")
     private String subtitle;
 
-    @Column(name = "description", length = 5000)
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "isbn", nullable = false, unique = true, length = 13)
+    @Column(name = "isbn", nullable = false, unique = true)
     private String isbn;
 
     @Column(name = "pages_count", nullable = false)
     private Integer pagesCount;
 
-    @Column(name = "image_link", length = 2000)
+    @Column(name = "image_link")
     private String imageLink;
 
     @Column(name = "printing_type")
