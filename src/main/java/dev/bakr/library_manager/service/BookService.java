@@ -52,24 +52,24 @@ public class BookService {
 
         return reader.getReaderBooks().stream().map(readerBook -> {
             var theBookItself = readerBook.getBook();
-            return new ReaderBookDtoResponse(theBookItself.getId(),
-                                             theBookItself.getTitle(),
-                                             theBookItself.getSubtitle(),
-                                             theBookItself.getDescription(),
-                                             theBookItself.getIsbn(),
-                                             theBookItself.getPagesCount(),
-                                             theBookItself.getImageLink(),
-                                             theBookItself.getPrintingType(),
-                                             theBookItself.getPublishingYear(),
-                                             theBookItself.getAuthor().getFullName(),
-                                             theBookItself.getCategory().getName(),
-                                             theBookItself.getPublisher().getName(),
-                                             readerBook.getStatus(),
-                                             readerBook.getAddingDate(),
-                                             readerBook.getLeftOffPage(),
-                                             readerBook.getQuotes(),
-                                             readerBook.getWords()
-            );
+            return ReaderBookDtoResponse.builder()
+                    .id(theBookItself.getId())
+                    .title(theBookItself.getTitle())
+                    .subtitle(theBookItself.getSubtitle())
+                    .description(theBookItself.getDescription())
+                    .isbn(theBookItself.getIsbn())
+                    .pagesCount(theBookItself.getPagesCount())
+                    .imageLink(theBookItself.getImageLink())
+                    .printingType(theBookItself.getPrintingType())
+                    .publishingYear(theBookItself.getPublishingYear())
+                    .authorName(theBookItself.getAuthor().getFullName())
+                    .categoryName(theBookItself.getCategory().getName())
+                    .publisherName(theBookItself.getPublisher().getName())
+                    .readingStatus(readerBook.getStatus())
+                    .addingDate(readerBook.getAddingDate())
+                    .leftOffPage(readerBook.getLeftOffPage())
+                    .quotes(readerBook.getQuotes())
+                    .words(readerBook.getWords()).build();
         }).toList();
     }
 
