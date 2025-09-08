@@ -16,6 +16,7 @@ import dev.bakr.library_manager.utils.StatusValidator;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -115,11 +116,11 @@ public class BookService {
         Reader reader = readerRepository.findById(authenticatedReaderId).orElseThrow(() -> new NotFoundException(
                 "Looks like the reader with id: " + authenticatedReaderId + " has been removed from the database!"));
 
-        Book existingBookInDatabase = bookRepository.findByIsbn(bookDtoRequest.isbn());
+        Optional<Book> existingBookInDatabase = bookRepository.findByIsbn(bookDtoRequest.isbn());
 
         ReaderBook readerBookToAdd;
 
-        if (existingBookInDatabase == null) {
+        if (existingBookInDatabase.isEmpty()) {
             Book newBookEntity = bookMapper.toEntity(bookDtoRequest);
             newBookEntity.setAuthor(authorService.findOrCreateAuthor(bookDtoRequest.authorFullName()));
             newBookEntity.setCategory(categoryService.findOrCreateCategory(bookDtoRequest.categoryName()));
@@ -134,13 +135,13 @@ public class BookService {
 
             return "We've successfully created the book and added it to your books.";
         } else {
-            var readerBookToAddId = ReaderBook.createCompositeKey(reader.getId(), existingBookInDatabase.getId());
+            var readerBookToAddId = ReaderBook.createCompositeKey(reader.getId(), existingBookInDatabase.get().getId());
             boolean isBookExistsInReaderCollection = readerBookRepository.existsById(readerBookToAddId);
             if (isBookExistsInReaderCollection) {
                 throw new ExistsException("You already have this book in your collection!");
             }
 
-            readerBookToAdd = new ReaderBook(reader, existingBookInDatabase);
+            readerBookToAdd = new ReaderBook(reader, existingBookInDatabase.get());
             readerBookRepository.save(readerBookToAdd);
 
             reader.getReaderBooks().add(readerBookToAdd);
