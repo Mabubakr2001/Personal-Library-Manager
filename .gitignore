@@ -53,4 +53,4 @@ build/
 .mvn
 
 #Environment Variablesd
-.env.*
+/.env*
