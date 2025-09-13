@@ -22,7 +22,7 @@ public class GenerateHMACKeySafe {
 
             System.out.println("=== Generated HMAC Secret Key ===");
             System.out.println();
-            System.out.println("🔑 Copy this line to your existing .env file:");
+            System.out.println("🔑 Copy this line to your existing .env.app file:");
             System.out.println("JWT_SECRET_KEY=" + secretKey);
             System.out.println();
             System.out.println("📝 Also add this if you don't have it:");

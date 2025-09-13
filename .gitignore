@@ -53,4 +53,5 @@ build/
 .mvn
 
 #Environment Variables
-.env
+.env.app
+.env.db

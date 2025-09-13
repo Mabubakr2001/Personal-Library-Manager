@@ -1,0 +1,42 @@
+version: "3.9"
+
+# Defines the containers you want Docker Compose to run.
+volumes:
+  db_data:
+
+networks:
+  my-network:
+    driver: bridge
+
+services:
+  db:
+    image: mysql:8.0.42
+    container_name: db
+    restart: always
+    env_file:
+      - .env.db
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./healthcheck.sh:/healthcheck.sh   # mount the script
+    healthcheck:
+      test: [ "CMD-SHELL", "/healthcheck.sh" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - my-network
+
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env.app
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
