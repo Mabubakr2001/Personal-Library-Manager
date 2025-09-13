@@ -52,6 +52,5 @@ build/
 #Maven
 .mvn
 
-#Environment Variables
-.env.app
-.env.db
+#Environment Variablesd
+.env.*
