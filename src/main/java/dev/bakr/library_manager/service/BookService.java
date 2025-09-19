@@ -177,7 +177,7 @@ public class BookService {
         var updatedReaderBook = readerBookRepository.save(readerBookToUpdate);
 
         var theBookItself = updatedReaderBook.getBook();
-
+        
         return new ReaderBookDtoResponse(theBookItself.getId(),
                                          theBookItself.getTitle(),
                                          theBookItself.getSubtitle(),

@@ -1,0 +1,11 @@
+# Maven/Gradle build output
+target/
+build/
+
+# Git + IDE
+.git
+.gitignore
+.idea
+
+# Env files (don’t bake secrets into images!)
+.env*

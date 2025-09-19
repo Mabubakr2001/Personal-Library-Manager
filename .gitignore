@@ -54,3 +54,4 @@ build/
 
 #Environment Variablesd
 /.env*
+!*.example
