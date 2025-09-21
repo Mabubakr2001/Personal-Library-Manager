@@ -57,7 +57,7 @@ that I like, and also when I found out that I'm using another external app to ca
     ```bash
     git clone https://github.com/Mabubakr2001/Personal-Library-Manager-Backend.git
     ```
-   **Hint:** Replace Mabubakr2001 with your actual GitHub username if you fork this project
+   Replace Mabubakr2001 with your actual GitHub username if you fork this project
 
 4. ### Navigate to the folder
 
@@ -65,14 +65,19 @@ that I like, and also when I found out that I'm using another external app to ca
     cd Personal-Library-Manager-Backend
     ```
 
-6. ### Build the image and build-run the container
+5. ### Build the app image
 
    ```bash
-    docker-compose up --build
+   docker build -t library-manager:1.0 -f docker/app/Dockerfile .
    ```
-   **Hint:** Later run: ```docker-compose up``` (just reuses the local image)
 
-7. ### Stop the container (when needed)
+6. ### Build and run the container from the image
+
+   ```bash
+    docker-compose up
+   ```
+
+7. ### Stop and remove the container (when needed)
    ```bash
    docker-compose down
    ```

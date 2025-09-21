@@ -27,7 +27,7 @@ services:
       - my-network
 
   app:
-    image: personal-library-manager:1.0
+    image: library-manager:1.0
     container_name: app
     depends_on:
       db:
