@@ -46,7 +46,7 @@ that I like, and also when I found out that I'm using another external app to ca
 
 1. ### Open Docker Desktop to run Docker Engine
 
-2. ### Navigate to Desktop from the terminal:
+2. ### Navigate to a folder where you want to clone the project (e.g., Desktop):
 
     ```bash
     cd Desktop
@@ -57,7 +57,7 @@ that I like, and also when I found out that I'm using another external app to ca
     ```bash
     git clone https://github.com/Mabubakr2001/Personal-Library-Manager-Backend.git
     ```
-   (Replace Mabubakr2001 with your actual GitHub username if you fork this project)
+   **Hint:** Replace Mabubakr2001 with your actual GitHub username if you fork this project
 
 4. ### Navigate to the folder
 
@@ -65,14 +65,20 @@ that I like, and also when I found out that I'm using another external app to ca
     cd Personal-Library-Manager-Backend
     ```
 
-5. ### Build the app image
+6. ### Build the image and build-run the container
 
-    ```bash
-    docker build -t personal-library-manager:1.0 -f docker/app/Dockerfile .
-    ```
-
-6. ### Create and run the container
-
-    ```bash
-    docker-compose up
+   ```bash
+    docker-compose up --build
    ```
+   **Hint:** Later run: ```docker-compose up``` (just reuses the local image)
+
+7. ### Stop the container (when needed)
+   ```bash
+   docker-compose down
+   ```
+
+## ❤️ Author
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square)](https://www.linkedin.com/in/moaboubakr2001/)
+[![GitHub](https://img.shields.io/badge/GitHub-%230D1117.svg?style=flat-square)](https://github.com/Mabubakr2001)
+[![Website](https://img.shields.io/badge/Website-%23263538.svg?style=flat-square)](https://bakr-portfolio.web.app/)
