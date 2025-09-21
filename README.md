@@ -20,7 +20,7 @@ that I like, and also when I found out that I'm using another external app to ca
 ## 🏷️ Topics
 
 [![Java](https://img.shields.io/badge/Java-%23EA8C10.svg?style=flat-square&logo=openjdk&logoColor=white)](https://www.java.com/en/)
-[![Spring](https://img.shields.io/badge/Spring-%236DB33F.svg?style=flat-square&logo=spring&logoColor=white)](https://spring.io/projects/spring-boot)
+[![Spring](https://img.shields.io/badge/Spring-%236DB33F.svg?style=flat-square&logo=spring&logoColor=white)](https://spring.io/)
 [![MySQL](https://img.shields.io/badge/MySQL-%233E6E93.svg?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Flyway](https://img.shields.io/badge/Flyway-%23CC0200.svg?style=flat-square&logo=flyway&logoColor=white)](https://www.red-gate.com/products/flyway/community/)
 [![Docker](https://img.shields.io/badge/Docker-%230D4DF2.svg?style=flat-square&logo=docker&logoColor=white)](https://www.docker.com/)
@@ -29,3 +29,50 @@ that I like, and also when I found out that I'm using another external app to ca
 [![OpenAPI](https://img.shields.io/badge/OpenAPI-%236BA539.svg?style=flat-square&logo=openapiinitiative&logoColor=white)](https://www.openapis.org/)
 [![JWT](https://img.shields.io/badge/JWT-%23FA015B.svg?style=flat-square&logo=jsonwebtokens&logoColor=white)](https://www.jwt.io/introduction#what-is-json-web-token)
 
+## 🛠️ Requirements
+
+- Basic knowledge of Environment Variables
+- Basic knowledge of [Apache Maven](https://maven.apache.org/)
+- Basic knowledge of Docker and Docker-Compose
+
+## 🚀 Getting Started
+
+#### Prerequisites (MacOS or Windows):
+
+- [Git](https://git-scm.com/) installed
+- [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed
+- Any IDE installed (preferred [Intellij IDEA](https://www.jetbrains.com/idea/))
+- Any browser installed
+
+1. ### Open Docker Desktop to run Docker Engine
+
+2. ### Navigate to Desktop from the terminal:
+
+    ```bash
+    cd Desktop
+    ```
+
+3. ### Clone the repo
+
+    ```bash
+    git clone https://github.com/Mabubakr2001/Personal-Library-Manager-Backend.git
+    ```
+   (Replace Mabubakr2001 with your actual GitHub username if you fork this project)
+
+4. ### Navigate to the folder
+
+    ```bash
+    cd Personal-Library-Manager-Backend
+    ```
+
+5. ### Build the app image
+
+    ```bash
+    docker build -t personal-library-manager:1.0 -f docker/app/Dockerfile .
+    ```
+
+6. ### Create and run the container
+
+    ```bash
+    docker-compose up
+   ```
