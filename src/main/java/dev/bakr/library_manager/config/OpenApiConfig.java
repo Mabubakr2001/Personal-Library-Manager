@@ -21,7 +21,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                              .title("OpenAPI specification - Readiction")
+                              .title("OpenAPI specification - Personal Library Manager")
                               .version("1.0")
                               .description("The API documentation for Frontend and Testing")
                               .contact(new Contact()

@@ -27,7 +27,7 @@ services:
       - my-network
 
   app:
-    image: 428389801777.dkr.ecr.eu-west-1.amazonaws.com/library-manager:1.2
+    image: 428389801777.dkr.ecr.eu-west-1.amazonaws.com/library-manager:1.3
     container_name: app
     depends_on:
       db:
