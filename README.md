@@ -44,40 +44,56 @@ that I like, and also when I found out that I'm using another external app to ca
 - Any IDE installed (preferred [Intellij IDEA](https://www.jetbrains.com/idea/))
 - Any browser installed
 
-1. ### Open Docker Desktop to run Docker Engine
+1. #### Open Docker Desktop to run Docker Engine
+2. #### Open Intellij IDEA
+3. #### Open any terminal
 
-2. ### Navigate to a folder where you want to clone the project (e.g., Desktop):
+4. #### Navigate to a folder where you want to clone the project (e.g., Desktop)
 
     ```bash
     cd Desktop
     ```
 
-3. ### Clone the repo
+5. #### Clone the repo
 
     ```bash
     git clone https://github.com/Mabubakr2001/Personal-Library-Manager-Backend.git
     ```
    Replace Mabubakr2001 with your actual GitHub username if you fork this project
 
-4. ### Navigate to the folder
+6. #### Navigate to the folder
 
     ```bash
     cd Personal-Library-Manager-Backend
     ```
 
-5. ### Build the app image
+7. ### Open .env.db.example from Intellij (for MySQL container)
+
+   ```
+   MYSQL_ROOT_PASSWORD=your_database_password
+   ```
+   Change the placeholder for each property ```your_database_password``` (e.g., password)
+
+8. ### Open .env.app.example from Intellij (for the app container)
+
+   ```
+   SPRING_DATASOURCE_USERNAME=your_database_username
+   ```
+   Change the placeholder for each property ```your_database_username``` (e.g., root)
+
+9. ### Build the app image
 
    ```bash
    docker build -t library-manager:1.0 -f docker/app/Dockerfile .
    ```
 
-6. ### Build and run the container from the image
+10. ### Build and run the container from the image
 
-   ```bash
-    docker-compose up
-   ```
+```bash
+ docker-compose up
+```
 
-7. ### Stop and remove the container (when needed)
+11. ### Stop and remove the container (when needed)
    ```bash
    docker-compose down
    ```
@@ -85,5 +101,4 @@ that I like, and also when I found out that I'm using another external app to ca
 ## ❤️ Author
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat-square)](https://www.linkedin.com/in/moaboubakr2001/)
-[![GitHub](https://img.shields.io/badge/GitHub-%230D1117.svg?style=flat-square)](https://github.com/Mabubakr2001)
 [![Website](https://img.shields.io/badge/Website-%23263538.svg?style=flat-square)](https://bakr-portfolio.web.app/)
