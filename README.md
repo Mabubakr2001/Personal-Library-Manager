@@ -9,7 +9,7 @@ that I like, and also when I found out that I'm using another external app to ca
 
 ## ✨ Key Features
 
-- **Registration:** Registering the user by creating a new account and sending him a 6-digit verification code.
+- **Registration:** Registering the user by creating a new account and sending them a 6-digit verification code.
 - **Logging In:** The user can enter the 6-digit verification code to verify his new account and receive the JWT.
 - **Adding New Book:** After logging in, the user can add the information of any new book that he has bought.
 - **Updating the Book Info:** The user can also change the book info, like the status, to keep track his reading journey.
@@ -97,6 +97,48 @@ that I like, and also when I found out that I'm using another external app to ca
       ```bash
       docker-compose down
       ```
+
+## 🎯 API Testing
+
+### Access Swagger UI to test the API endpoints ```http://localhost:8080/swagger-ui/index.html```
+
+1. #### Register and create a new account: ```/api/v1/auth/signup```
+
+```json
+{
+  "id": 2,
+  "username": "john2025",
+  "email": "johndoe@gmail.com",
+  "password": "$2a$10$XcqJwVtvwPfWvoy44icyq.r6eXEaDqjEx5DStFgLxkZRY5H5fP4yW",
+  "isEnabled": false,
+  "verificationCode": "655850",
+  "verificationExpiration": "2025-09-22T16:20:57.428081555"
+}
+```
+
+2. #### Verify your new account (you have 10 minutes): ```/api/v1/auth/verify```
+
+```
+User verified successfully! Login to receive your JWT token...
+```
+
+3. #### Login to receive your JWT for accessing the resources: ```/api/v1/auth/login```
+
+```json
+{
+  "jwtToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huMjAyNSIsImlhdCI6MTc1ODU1Nzc0OCwiZXhwIjoxNzU4NjQ0MTQ4fQ.7v0hvrldP_CnpECn3D1lACztvwn3OhgZR1jA9_ZRN94",
+  "jwtExpirationMs": 86400000,
+  "jwtExpirationText": "In 24 Hours"
+}
+```
+
+4. #### Scroll all the way up to add the JWT by clicking this button:
+
+<div>
+  <img src="./src/main/resources/static/images/jwt.png" alt="Authorize button">
+</div>
+
+<p align="center" style="font-size: 20px">🎉 Congratulations. Now you can start accessing the resources.</p>
 
 ## ❤️ Author
 
