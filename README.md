@@ -89,14 +89,14 @@ that I like, and also when I found out that I'm using another external app to ca
 
 10. ### Build and run the container from the image
 
-```bash
- docker-compose up
-```
+      ```bash
+       docker-compose up
+      ```
 
 11. ### Stop and remove the container (when needed)
-   ```bash
-   docker-compose down
-   ```
+      ```bash
+      docker-compose down
+      ```
 
 ## ❤️ Author
 
