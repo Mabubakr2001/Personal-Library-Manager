@@ -138,7 +138,9 @@ User verified successfully! Login to receive your JWT token...
   <img src="./src/main/resources/static/images/jwt.png" alt="Authorize button">
 </div>
 
-<p align="center" style="font-size: 20px">🎉 Congratulations. Now you can start accessing the resources.</p>
+<div align="center">
+  <h3>🎉 Congratulations. Now you can start accessing the resources.</h3>
+</div>
 
 ## ❤️ Author
 
