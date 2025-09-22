@@ -37,7 +37,7 @@ that I like, and also when I found out that I'm using another external app to ca
 
 ## 🚀 Getting Started
 
-#### Prerequisites (MacOS or Windows):
+### Prerequisites:
 
 - [Git](https://git-scm.com/) installed
 - [Docker Desktop](https://docs.docker.com/get-started/get-docker/) installed
